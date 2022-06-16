@@ -17,6 +17,7 @@ class Plus{
         char getCuenta();
         void setCuenta(char);
         virtual void getInfo();
+        Plus* &operator[](int);
         friend std::ostream& operator<< (std::ostream &, Plus&);
 
 };

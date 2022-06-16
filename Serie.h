@@ -4,6 +4,7 @@
 #include <vector>
 #include "Episode.h"
 #include "Plus.h"
+#include "Movie.h"
 
 /*
 Clase que contiene Episodios encapsuladoes en un vector
@@ -51,7 +52,7 @@ Funciones especiales de la clase
         void agregarEpisodio(Episode);
         void getInfo() override;
         Episode &operator[](int);
-
+        bool operator> (const Serie&);
 
 
 /*

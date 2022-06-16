@@ -1,4 +1,12 @@
 m Garra 120 R Cuando_un_desafortunado_cazatalentos_de_basquetbol_encuentra https://www.youtube.com/watch?v=nM4iy0reaCA 5 Populares
+m Coraline 100 PG La_Puerta_Secreta https://www.youtube.com/watch?v=dfln5cce8mM 4.5 Infantil
+m Nemo 175 PG Un_Pescadito_que_se_perdio https://www.youtube.com/watch?v=ba4TwyaNhSQ 4 Infantil
 s StrangerThings 4 Suspenso 5
 e Capitulo1 50 TV-14 Will_es_testigo_de_algo_horroroso https://www.youtube.com/watch?v=Lpd6A7W4fYE 1
 e Capitulo2 55 TV-14 Lucas_Mike_y_Dustin_intentan_hablar_con https://www.youtube.com/watch?v=Lpd6A7W4fYE 1
+s BreakingBad 5 Accion 5
+e PrincipioDelFin 62 TV-14 Un_Profesor_de_Quimica https://www.youtube.com/watch?v=p3qCKOXO6kE 1
+e ElGatoEnLaBolsa 65 TV-14 Luego_del_fracaso_de_su_primer_negocio https://www.youtube.com/watch?v=p3qCKOXO6kE 1
+s CasaDePapel 5 Accion  5
+e ElFinDelCamino 52 TV-14 El_profesor_se_enfremta_a_sierra https://www.youtube.com/watch?v=To_kVMMu-Ls 5
+e CreesEnLaRencarnacion 63 TV-14 Arturo_aprovecha_una_oportunidad_para_dar_batalla https://www.youtube.com/watch?v=To_kVMMu-Ls 5

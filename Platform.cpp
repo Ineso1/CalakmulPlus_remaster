@@ -5,12 +5,14 @@ Platform::Platform(){
     std::cout<<"\n";
 }
 
-
+/*
 Plus* &Platform::operator[](int index){
     if (index>=0 && index<vecPlatform.size()){
         return vecPlatform.at(index);
     }
 }
+*/
+
 
 void Platform::loadPlatformA(){
     std::ifstream archivo;
@@ -24,8 +26,10 @@ void Platform::loadPlatformA(){
                     archivo >> peli;  
                     peli.Plus::setCuenta(tipoVideo);
 
-                    vecPlatform.push_back(new Movie);
-                    vecPlatform[vecPlatform.size()-1] = &peli;
+                    vecPlatformMovie.push_back(peli);
+                    
+                    //vecPlatform.push_back(new Movie);
+                    //vecPlatform[vecPlatform.size()-1] = &peli;
                                     
 
                 }else if (tipoVideo == 's'){
@@ -34,28 +38,55 @@ void Platform::loadPlatformA(){
                     archivo >> seri;
                     seri.Plus::setCuenta(tipoVideo);
                     
-                    vecPlatform.push_back(new Serie);
-                    vecPlatform[vecPlatform.size()-1] = &seri;
+                    vecPlatformSerie.push_back(seri);
+
+                    //vecPlatform.push_back(new Serie);
+                    //vecPlatform[vecPlatform.size()-1] = &seri;
 
                     }
                 else if(tipoVideo =='e'){
                     Episode ep;
                     Serie *seri;
                     archivo >> ep;
-                    seri = dynamic_cast<Serie *>(vecPlatform[vecPlatform.size()-1]);
-                    seri->agregarEpisodio(ep);
-                    vecPlatform[vecPlatform.size()] = seri;
+                    
+                    vecPlatformSerie[vecPlatformSerie.size()-1].agregarEpisodio(ep);
+                    //seri = dynamic_cast<Serie *>(vecPlatform[vecPlatform.size()-1]);
+                    //seri->agregarEpisodio(ep);
+                    //vecPlatform[vecPlatform.size()] = seri;
                 }
                 else{
                     break;
                 }
-                    printNames();
+                    //printNames();
                 }
             }
 
         //printCatalog(catalog);
         archivo.close();
 }
+
+void Platform::showMovies(){
+    for(int i = 0 ; i < vecPlatformMovie.size(); i++ ){
+        std::cout << vecPlatformMovie[i];
+    }
+}
+
+void Platform::showSeries(){
+    for(int i = 0 ; i < vecPlatformSerie.size(); i++ ){
+        std::cout << vecPlatformSerie[i];
+    }
+}
+
+Movie Platform::getMovie(int index){
+    std::cout << vecPlatformMovie[index];
+    return vecPlatformMovie[index];
+}
+
+Serie Platform::getSerie(int index){
+    std::cout << vecPlatformSerie[index];
+    return vecPlatformSerie[index];
+}
+
 
 void Platform::loadPlatformB(){
     

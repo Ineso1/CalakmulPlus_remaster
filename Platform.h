@@ -16,6 +16,8 @@ Guarda punteros de la clase Plus para poder usar de forma polimorfica a la clase
 class Platform{
     private:
         std::vector<Plus*> vecPlatform;
+        std::vector<Movie> vecPlatformMovie;
+        std::vector<Serie> vecPlatformSerie;
     public:
 
         Platform();
@@ -30,13 +32,19 @@ Funciones especiales para el manejo del vector
     *   Funcion que retorna clase derivada original (upcasting para Serie)
 */
         Plus* &operator[](int);
+
         void loadPlatformA();
         void loadPlatformB();
         int size();
+        Movie getMovie(int);
+        Serie getSerie(int);
+
 
         void printNames();
         Movie upCastPlus_Movie(Plus*&);
         Serie upCastPlus_Serie(Plus*&);
+        void showMovies();
+        void showSeries();
 };
 
 #endif // PLATFORM_H

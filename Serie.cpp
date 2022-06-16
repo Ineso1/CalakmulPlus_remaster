@@ -77,6 +77,16 @@ void Serie::getInfo(){
     std::cout << "Name: " <<getName()<<"\nRate: " << getRate() <<"\nEpisodios: " << getSeasons() <<std::endl;
 }
 
+Episode &Serie::operator[](int index){
+    if (index>=0 && index<episodes.size()){
+        std::cout << episodes.at(index);
+    }
+}
+
+bool Serie::operator > (const Serie& s2){
+    return rate > s2.rate;
+}
+
 /*
 Sobrecarga de operadores de salida y entrada
 */

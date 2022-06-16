@@ -47,6 +47,10 @@ void Movie::setGender(std::string gender){
     this -> gender = gender;
 }
 
+bool Movie::operator > (const Movie& s2){
+    return rate > s2.rate;
+}
+
 /*
 Sobrecarga de operadores de entrada y salida
 */

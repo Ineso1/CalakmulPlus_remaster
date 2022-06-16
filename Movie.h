@@ -5,6 +5,7 @@
 #include "Episode.h"
 #include "Video.h"
 #include "Plus.h"
+#include "Serie.h"
 
 
 /*
@@ -30,6 +31,7 @@ Getters y Setters
         void setRate(float);
         void setGender(std::string);
         void getInfo() override;
+        bool operator> (const Movie&);
         
 /*
 Sobrecarga de operadores de entrada y salida
